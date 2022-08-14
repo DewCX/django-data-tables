@@ -21,3 +21,29 @@ body{
 .push {
     height: 50px;
 }
+
+
+/* ===================
+# CUSTOM PAGINATION
+====================*/
+
+.page-item.active .page-link {
+    columns: #fff;
+    background-color: #6c757d;
+    border: 1px solid #6c757d;
+}
+
+.pagination > li > a {
+    background-color: #FFF;
+    color: #6c757d;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > span > a:focus,
+.pagination > span > a:hover {
+    color: #111 !important;
+    background-color: #d3d3d3 !important;
+    border: 1px solid #6c757d !important;
+    box-shadow: none !important;
+}
