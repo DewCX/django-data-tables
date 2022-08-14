@@ -38,6 +38,14 @@
                     </a>
                 </div>
                 <!--Create a input outsite-->
+                <div class="d-flex" style="margin-right: 25px;">
+                    <div class="input-group input-group-sm">
+                        <input type="search" id="search" placeholder="Live search..." aria-label="Search">
+                        <a href="{% url 'home' %}" class="btn btn-secondary btn-sm">
+                            <i class="fas fa-sync-alt"></i>
+                        </a>
+                    </div>
+                </div>
             </nav>
         </header>
 
@@ -85,6 +93,11 @@
             //     "orderable": false
             // }]
         });
+        // Enable Searchbox Outside
+        var newSearch = $("#example").DataTable();
+        $("#search").keyup(function() {
+            newSearch.search($(this).val()).draw();
+        })
         
     </script>
 </body>
